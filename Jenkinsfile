@@ -334,7 +334,7 @@ pipeline {
                     }
               }
 
-            } else if ("${list[i]}" == "'containerScan'" && stage_flag['containerScan']) {
+            } else if ("${list[i]}" == "'containerImageScan'" && stage_flag['containerScan']) {
                  stage("Container Image Scan") {
                      if (env.CONTAINERSCANTYPE == 'XRAY') {
                          jf 'docker scan $REGISTRY_URL:$BUILD_TAG'
