@@ -145,7 +145,7 @@ pipeline {
                         if ("${list[i]}" == "'UnitTests'") {
                             stage('Unit Tests') {
                                 sh """
-                                docker run --rm -v "$WORKSPACE":/usr/src/mymaven -w /usr/src/mymaven $JAVA_MVN_IMAGE_VERSION ./gradlew clean test
+                                docker run --rm -v "$WORKSPACE":/usr/src/mymaven -w /usr/src/mymaven $JAVA_MVN_IMAGE_VERSION ./gradlew test
                                 """
                             }
                         }
