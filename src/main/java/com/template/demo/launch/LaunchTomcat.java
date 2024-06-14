@@ -42,7 +42,6 @@ public class LaunchTomcat {
                 w.write("<h4>" + greetingMessage + "</h4>");
                 w.write("</body>");
                 w.write("</html>");
-
                 w.flush();
             }
         });
