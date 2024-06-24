@@ -27,7 +27,7 @@ public class LaunchTomcat {
         Tomcat tomcat = new Tomcat();
         tomcat.setBaseDir("temp");
         tomcat.setPort(Integer.parseInt(port));
-
+        tomcat.getConnector();
         Context ctx = tomcat.addContext("", new File(".").getAbsolutePath());
 
         Tomcat.addServlet(ctx, servletName, new HttpServlet() {
@@ -43,12 +43,11 @@ public class LaunchTomcat {
                 w.flush();
             }
         });
-        if(servletContext != null  && !servletContext.isEmpty()){
-            ctx.addServletMappingDecoded(servletContext+"/*",servletName);
-        }else {
-            ctx.addServletMappingDecoded("/*",servletName);
+        if (servletContext != null && !servletContext.isEmpty()) {
+            ctx.addServletMappingDecoded(servletContext + "/*", servletName);
+        } else {
+            ctx.addServletMappingDecoded("/*", servletName);
         }
-       
 
         try {
             tomcat.start();
