@@ -57,4 +57,7 @@ out/
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 !gradle/wrapper/gradle-wrapper.jar
+=======
+>>>>>>> a3ae9e9ad62a8cf4687a19cbb0ec4022f0652ef2
